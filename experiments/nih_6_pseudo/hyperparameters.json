@@ -1,0 +1,150 @@
+{
+    "py/object": "hyperparameters.Hyperparameters",
+    "os_system": "local",
+    "dataset_type": "nih_pancreas",
+    "fold": 1,
+    "data_split": {
+        "training_use": 6,
+        "validation_use": "all",
+        "testing_use": "all",
+        "training": [
+            0,
+            0.75
+        ],
+        "validation": [
+            0.75,
+            0.8
+        ],
+        "testing": [
+            0.8,
+            1
+        ]
+    },
+    "num_workers": 4,
+    "batch_size": 5,
+    "tform_training": {
+        "patch": {
+            "crop_size": [
+                160,
+                160,
+                64
+            ],
+            "prob": 0.5,
+            "target_vox_space": [
+                0.85,
+                0.85,
+                0.75
+            ],
+            "aug_range": 0.1
+        },
+        "gamma": {
+            "prob": 0.1,
+            "gamma": [
+                0.8,
+                1.2
+            ]
+        }
+    },
+    "tform_training_pseudo": {
+        "patch": {
+            "crop_size": [
+                160,
+                160,
+                64
+            ],
+            "prob": 0.5,
+            "target_vox_space": [
+                0.85,
+                0.85,
+                0.75
+            ],
+            "aug_range": 0.1
+        },
+        "gamma": {
+            "prob": 0.1,
+            "gamma": [
+                0.8,
+                1.2
+            ]
+        }
+    },
+    "tform_testing": {
+        "crop": {
+            "crop_size": {
+                "py/id": 7
+            }
+        },
+        "resample": {
+            "target_vox_space": {
+                "py/id": 8
+            },
+            "aug_range": 0
+        }
+    },
+    "use_cuda": true,
+    "device": {
+        "py/reduce": [
+            {
+                "py/type": "torch.device"
+            },
+            {
+                "py/tuple": [
+                    "cuda",
+                    0
+                ]
+            }
+        ]
+    },
+    "device_num": 0,
+    "save_path": "/home/hugoyeung/Desktop/release_code/M&N_github/experiments/nih_6_pseudo",
+    "hp_name": "hyperparameters.json",
+    "max_epochs": 4000,
+    "warmup_epochs": 50,
+    "transition_epochs": 500,
+    "restart_epoch": null,
+    "freq_switch": 1,
+    "save_pseudo": [
+        1000,
+        1500,
+        2000,
+        3000
+    ],
+    "model": {
+        "model_2d": {
+            "training_specs": {
+                "optimizer": "adamw",
+                "learning_rate": 0.001,
+                "max_epochs": 4000,
+                "warmup_epochs": 50,
+                "patience": 20
+            },
+            "model_type": "nvidia/segformer-b2-finetuned-ade-512-512",
+            "model_specs": {
+                "pretrained": true,
+                "in": "repeat",
+                "base": "lora",
+                "out": "",
+                "rank": 64,
+                "alpha": 64
+            }
+        },
+        "model_3d": {
+            "training_specs": {
+                "optimizer": "adamw",
+                "learning_rate": 0.0001,
+                "max_epochs": 4000,
+                "warmup_epochs": 50,
+                "patience": 10
+            },
+            "model_type": "unet3d",
+            "model_specs": {
+                "pretrained": false,
+                "dropout": 0,
+                "base_n_filter": 32
+            }
+        }
+    },
+    "img_path": "/home/hugoyeung/Desktop/Datasets/NIH_Pancreas/Pancreas-CT",
+    "num_classes": 1,
+    "in_channels": 1
+}
