@@ -1,6 +1,6 @@
 # M&N: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model
 <div align="center">
-  <img src="resources/incentive.png" alt="Figure" width="60%" />
+  <img src="resources/incentive.jpg" alt="Figure" width="60%" />
 </div>
 
 This repository contains the official PyTorch code for:
