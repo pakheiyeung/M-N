@@ -4,7 +4,7 @@
 </div>
 
 This repository contains the official PyTorch code for:
-**Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model (M&N)** [[Project Page](https://pakheiyeung.github.io/M-N_wp/)][[Paper](https://arxiv.org/abs/2509.15167)][[Bibtex](resources/bibtex.bib)]
+**Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model (M&N)** [[Project Page](https://pakheiyeung.github.io/M-N_wp/)][[Paper](https://arxiv.org/abs/2509.15167)][[Presentation (YouTube)](https://www.youtube.com/watch?v=mCc9JTBRHNM)][[Bibtex](resources/bibtex.bib)]
 
 ## Environment & Dependencies
 
