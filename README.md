@@ -52,6 +52,7 @@ python test.py --save_path nih_6_pseudo --hp_name hyperparameters.json
 |---------|--------------------|-------|
 | [Pancreas-CT](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) | 6 | [nih_6_pseudo](experiments/nih_6_pseudo/) |
 | [MRI LA Cavity](https://www.cardiacatlas.org/atriaseg2018-challenge/atria-seg-data/) | 4 | [la_4_pseudo](experiments/la_4_pseudo/) |
+| [MRI LA Cavity](https://www.cardiacatlas.org/atriaseg2018-challenge/atria-seg-data/) | 8 | [la_8_pseudo](experiments/la_8_pseudo/) |
 
 
 ## Citation
